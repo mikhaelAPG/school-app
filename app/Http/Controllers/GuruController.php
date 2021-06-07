@@ -52,5 +52,19 @@ class GuruController extends Controller
             'mapel.required' => 'wajib diisi !!',
             'foto_guru.required' => 'wajib diisi !!',
         ]);
+
+        $file = Request()->foto_guru;
+        $fileName = Request()->nip. '.' .$file->extension();
+        $file->move(public_path('foto_guru'), $fileName);
+    
+        $data = [
+            'nip' => Request()->nip,
+            'nama_guru' => Request()->nama_guru,
+            'mapel' => Request()->mapel,
+            'foto_guru' => $fileName,
+        ];
+
+        $this->GuruModel->addData($data);
+        return redirect()->route('guru')->with('pesan', 'Data Berhasil Ditambahkan !!!');
     }
 }
