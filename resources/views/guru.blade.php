@@ -3,6 +3,7 @@
 @section('title', 'Guru')
 
 @section('content')
+    <a href="/guru/add" class="btn btn-primary btn-sm">Add</a> <br>
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -23,9 +24,9 @@
                     <td>{{ $data->mapel }}</td>
                     <td><img src="{{ url('foto_guru/'.$data->foto_guru) }}" width="100px"></td>
                     <td>
-                        <a href="" class="btn btn-sm btn_success">Detail</a>
-                        <a href="" class="btn btn-sm btn_warning">Edit</a>
-                        <a href="" class="btn btn-sm btn_danger">Delete</a>
+                        <a href="/guru/detail/{{ $data->id_guru }}" class="btn btn-success btn-sm">Detail</a>
+                        <a href="" class="btn btn-warning btn-sm">Edit</a>
+                        <a href="" class="btn btn-danger btn-sm">Delete</a>
                     </td>
                 </tr>
             @endforeach
