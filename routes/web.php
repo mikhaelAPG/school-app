@@ -31,3 +31,10 @@ Route::get('/siswa', [SiswaController::class, 'index']);
 Route::get('/penjualan', [PenjualanController::class, 'index']);
 Route::get('/penjualan/print', [PenjualanController::class, 'print']);
 Route::get('/penjualan/printpdf', [PenjualanController::class, 'printpdf']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
