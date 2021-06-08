@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GuruController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\PenjualanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,5 +25,16 @@ Route::post('/guru/insert', [GuruController::class, 'insert']);
 Route::get('/guru/edit/{id_guru}', [GuruController::class, 'edit']);
 Route::post('/guru/update/{id_guru}', [GuruController::class, 'update']);
 Route::get('guru/delete/{id_guru}', [GuruController::class, 'delete']);
+
 Route::get('/siswa', [SiswaController::class, 'index']);
 
+Route::get('/penjualan', [PenjualanController::class, 'index']);
+Route::get('/penjualan/print', [PenjualanController::class, 'print']);
+Route::get('/penjualan/printpdf', [PenjualanController::class, 'printpdf']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
