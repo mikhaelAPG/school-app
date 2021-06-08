@@ -34,7 +34,7 @@
                     <td><img src="{{ url('foto_guru/'.$data->foto_guru) }}" width="100px"></td>
                     <td>
                         <a href="/guru/detail/{{ $data->id_guru }}" class="btn btn-success btn-sm">Detail</a>
-                        <a href="" class="btn btn-warning btn-sm">Edit</a>
+                        <a href="/guru/edit/{{ $data->id_guru }}" class="btn btn-warning btn-sm">Edit</a>
                         <a href="" class="btn btn-danger btn-sm">Delete</a>
                     </td>
                 </tr>
