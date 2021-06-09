@@ -17,6 +17,8 @@ class DatabaseSeeder extends Seeder
             GuruSeeder::class,
             KelasSeeder::class,
             MapelSeeder::class,
+            PenjualanSeeder::class,
+            UserSeeder::class,
         ]);
     }
 }
